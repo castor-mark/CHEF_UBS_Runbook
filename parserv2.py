@@ -76,9 +76,11 @@ class UBSPDFParserV2:
 
                     # More specific keywords for faster matching
                     # Look for the specific table we need - SWISS defined benefit plans
+                    # FLEXIBLE: Handle variations like "Swiss" or "Switzerland"
                     if "composition and fair value" in text_lower:
                         # Must be Swiss table (not UK table)
-                        if "swiss" in text_lower:
+                        # Check multiple variations
+                        if "swiss" in text_lower or "switzerland" in text_lower:
                             # Check if it's the benefit plans table
                             for keyword in config.PDF_TABLE_KEYWORDS:
                                 if keyword.lower() in text_lower:
@@ -154,16 +156,42 @@ class UBSPDFParserV2:
             self.logger.error(f"Error extracting table with Camelot: {e}")
             return None, None, None
 
+    def auto_detect_allocation_offset(self, df, date_col, date_row):
+        """
+        Auto-detect the correct column offset for allocation %.
+        Tries +1, +2, +3 and validates by checking if column contains 'allocation %'.
+        Returns the correct offset or None if not found.
+        """
+        import re
+
+        # Search in header rows (date_row and nearby rows) for "allocation %" text
+        for offset in [1, 2, 3]:
+            test_col = date_col + offset
+            if test_col >= df.shape[1]:
+                continue
+
+            # Check a few rows around date_row for "allocation" keyword
+            for check_row in range(max(0, date_row - 2), min(df.shape[0], date_row + 5)):
+                cell_value = str(df.iloc[check_row, test_col]).strip().lower()
+                if 'allocation' in cell_value and '%' in cell_value:
+                    self.logger.info(f"Auto-detected allocation % column at offset +{offset} (col {test_col})")
+                    return offset
+
+        # Fallback: Default to +2 (most common pattern)
+        self.logger.warning(f"Could not auto-detect allocation column, using default offset +2")
+        return 2
+
     def find_date_columns(self, df):
         """
         Dynamically find which columns contain which year's data.
-        The dates appear in the date header row, allocation % is 2 columns to the right.
-        Pattern: Date at col N → Allocation % at col N+2
+        AUTO-DETECTS the correct column offset for allocation % (handles +1, +2, or +3).
+        Pattern: Date at col N → Allocation % at col N+offset
         Returns dict with year info.
         """
         self.logger.info("Searching for date columns...")
 
         date_info = {}
+        detected_offset = None
 
         for idx, row in df.iterrows():
             for col_idx in range(df.shape[1]):
@@ -176,32 +204,39 @@ class UBSPDFParserV2:
                     year_short = date_match.group(1)
                     year_full = f"20{year_short}"
 
-                    # IMPORTANT: Allocation % column is 2 columns to the right of the date
-                    # Date structure: [Date col] [Total col] [Allocation % col]
-                    allocation_col = col_idx + 2
+                    # Auto-detect offset on first date found
+                    if detected_offset is None:
+                        detected_offset = self.auto_detect_allocation_offset(df, col_idx, idx)
+
+                    # Calculate allocation column using detected offset
+                    allocation_col = col_idx + detected_offset
 
                     if 'year1' not in date_info:
                         date_info['year1'] = {
                             'year': year_full,
-                            'col': allocation_col,  # Date col + 2 = Allocation %
+                            'col': allocation_col,
                             'date': cell_value,
                             'row': idx,
-                            'date_col': col_idx  # Keep original date column for reference
+                            'date_col': col_idx
                         }
-                        self.logger.info(f"Found Year 1: {year_full} at Date Col {col_idx}, Allocation Col {allocation_col}")
+                        self.logger.info(f"Found Year 1: {year_full} at Date Col {col_idx}, Allocation Col {allocation_col} (offset +{detected_offset})")
                     elif 'year2' not in date_info:
                         date_info['year2'] = {
                             'year': year_full,
-                            'col': allocation_col,  # Date col + 2 = Allocation %
+                            'col': allocation_col,
                             'date': cell_value,
                             'row': idx,
-                            'date_col': col_idx  # Keep original date column for reference
+                            'date_col': col_idx
                         }
-                        self.logger.info(f"Found Year 2: {year_full} at Date Col {col_idx}, Allocation Col {allocation_col}")
+                        self.logger.info(f"Found Year 2: {year_full} at Date Col {col_idx}, Allocation Col {allocation_col} (offset +{detected_offset})")
                         break
 
             if 'year1' in date_info and 'year2' in date_info:
                 break
+
+        # Store detected offset for validation
+        if date_info:
+            date_info['detected_offset'] = detected_offset
 
         return date_info
 
@@ -465,6 +500,49 @@ class UBSPDFParserV2:
 
         return percentages
 
+    def validate_extracted_data(self, data_list):
+        """
+        Comprehensive validation of extracted data.
+        Checks for common issues and provides detailed warnings.
+        Returns: (is_valid, warnings_list)
+        """
+        warnings = []
+        is_valid = True
+
+        for data in data_list:
+            year = data.get('year', 'Unknown')
+            percentages = data.get('percentages', {})
+            total_assets = data.get('total_assets', 0)
+
+            # Validation 1: Check percentage total
+            total_pct = sum([v for k, v in percentages.items() if k not in ['BONDS', 'EQUITIES', 'REALESTATE']])
+            if abs(total_pct - 100) > 2:  # Allow 2% tolerance
+                warnings.append(f"{year}: Percentage total is {total_pct}% (expected ~100%)")
+                is_valid = False
+                self.logger.warning(f"{year}: Percentage validation failed: {total_pct}%")
+            else:
+                self.logger.info(f"{year} Percentage validation passed: {total_pct}%")
+
+            # Validation 2: Check total assets is reasonable
+            if total_assets < 1000 or total_assets > 1000000:  # USD millions
+                warnings.append(f"{year}: Total assets {total_assets}M seems unusual (expected 1,000-1,000,000M)")
+                self.logger.warning(f"{year}: Total assets {total_assets}M seems unusual")
+
+            # Validation 3: Check we have key asset classes
+            required_classes = ['CASH', 'DOMESTICEQUITYSECURITIES', 'FOREIGNEQUITYSECURITIES']
+            missing = [cls for cls in required_classes if cls not in percentages]
+            if missing:
+                warnings.append(f"{year}: Missing required asset classes: {missing}")
+                self.logger.warning(f"{year}: Missing asset classes: {missing}")
+
+            # Validation 4: Check aggregated values exist
+            if 'BONDS' not in percentages or 'EQUITIES' not in percentages or 'REALESTATE' not in percentages:
+                warnings.append(f"{year}: Missing aggregated percentages")
+                is_valid = False
+                self.logger.error(f"{year}: Aggregated percentages not calculated")
+
+        return is_valid, warnings
+
     def parse_pdf(self, pdf_path):
         """
         Main method to parse a PDF report.
@@ -534,6 +612,17 @@ class UBSPDFParserV2:
                     self.logger.warning(f"{data['year']} Percentage total: {total_pct}% (deviation: {deviation}%)")
                 else:
                     self.logger.info(f"{data['year']} Percentage validation passed: {total_pct}%")
+
+        # Step 9: Comprehensive validation
+        is_valid, warnings = self.validate_extracted_data(parsed_data)
+        if not is_valid:
+            self.logger.error("Validation failed! Issues detected:")
+            for warning in warnings:
+                self.logger.error(f"  - {warning}")
+        elif warnings:
+            self.logger.warning("Validation passed with warnings:")
+            for warning in warnings:
+                self.logger.warning(f"  - {warning}")
 
         self.logger.info(f"Successfully parsed - {len(parsed_data)} years extracted")
         for data in parsed_data:

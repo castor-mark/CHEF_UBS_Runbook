@@ -1,0 +1,60 @@
+2025-12-04 09:44:21 - root - INFO - ============================================================
+2025-12-04 09:44:21 - root - INFO - Logging initialized
+2025-12-04 09:44:21 - root - INFO - Log file: ./logs\20251204_094421\ubs_20251204_094421.log
+2025-12-04 09:44:21 - root - INFO - Log level: DEBUG
+2025-12-04 09:44:21 - root - INFO - Run timestamp: 20251204_094421
+2025-12-04 09:44:21 - root - INFO - ============================================================
+2025-12-04 09:44:21 - __main__ - INFO - 
+Parsing PDF: downloads/20251203_160530/2024/Annual_Report_UBS_Group_2024.pdf
+2025-12-04 09:44:21 - __main__ - INFO - Extracted year from filename: 2024
+2025-12-04 09:44:21 - __main__ - INFO - Searching for Post-employment benefit plans section...
+2025-12-04 09:44:22 - __main__ - INFO - Total pages: 395, searching backwards from end...
+2025-12-04 09:44:34 - __main__ - INFO - Found benefit plans table on page 361
+2025-12-04 09:44:34 - __main__ - INFO - Extracting table from page 361 using Camelot...
+2025-12-04 09:44:35 - camelot - INFO - Processing page-361
+2025-12-04 09:44:35 - __main__ - INFO - Extracted table: 35 rows x 9 columns
+2025-12-04 09:44:35 - __main__ - INFO - Table accuracy: 98.82%
+2025-12-04 09:44:35 - __main__ - INFO - Saved extracted table to: extracted\20251204_094421\2024\benefit_plans_table_2024.csv
+2025-12-04 09:44:35 - __main__ - INFO - Saved extraction metadata to: extracted\20251204_094421\2024\extraction_metadata_2024.json
+2025-12-04 09:44:35 - __main__ - INFO - Searching for date columns...
+2025-12-04 09:44:35 - __main__ - INFO - Auto-detected allocation % column at offset +2 (col 4)
+2025-12-04 09:44:35 - __main__ - INFO - Found Year 1: 2024 at Date Col 2, Allocation Col 4 (offset +2)
+2025-12-04 09:44:35 - __main__ - INFO - Found Year 2: 2023 at Date Col 6, Allocation Col 8 (offset +2)
+2025-12-04 09:44:35 - __main__ - INFO - Finding data boundaries...
+2025-12-04 09:44:35 - __main__ - INFO - First data row (Cash) at row 7
+2025-12-04 09:44:35 - __main__ - INFO - Last data row (Total) at row 31
+2025-12-04 09:44:35 - __main__ - INFO - Parsing table data...
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 7: Cash and cash equivalents | Y1: 2.0% | Y2: 2.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 8: Equity securities | Y1: None% | Y2: None%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 9: Domestic | Y1: 0.0% | Y2: 0.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 10: Foreign | Y1: 3.0% | Y2: 4.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 11: Bonds | Y1: None% | Y2: None%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 12: Domestic, AAA to BBB– | Y1: 0.0% | Y2: 0.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 13: Foreign, AAA to BBB– | Y1: 0.0% | Y2: 0.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 14: Real estate / property | Y1: None% | Y2: None%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 15: Domestic | Y1: 11.0% | Y2: 11.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 16: Foreign | Y1: 2.0% | Y2: 2.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 17: Investment funds | Y1: None% | Y2: None%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 18: Equity | Y1: None% | Y2: None%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 19: Domestic | Y1: 2.0% | Y2: 3.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 20: Foreign | Y1: 20.0% | Y2: 19.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 21: Bonds1 | Y1: None% | Y2: None%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 22: Domestic, AAA to BBB– | Y1: 13.0% | Y2: 15.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 23: Domestic, below BBB– | Y1: 0.0% | Y2: 0.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 24: Foreign, AAA to BBB– | Y1: 25.0% | Y2: 25.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 25: Foreign, below BBB– | Y1: 3.0% | Y2: 2.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 26: Real estate | Y1: None% | Y2: None%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 27: Domestic | Y1: 4.0% | Y2: 4.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 28: Foreign | Y1: 1.0% | Y2: 1.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 29: Other | Y1: 9.0% | Y2: 10.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 30: Other investments | Y1: 4.0% | Y2: 2.0%
+2025-12-04 09:44:35 - __main__ - DEBUG - Row 31: Total fair value of plan assets | Y1: 100.0% | Y2: 100.0%
+2025-12-04 09:44:35 - __main__ - INFO - Calculated aggregated percentages - Bonds: 0.0%, Equities: 3.0%, Real Estate: 13.0%
+2025-12-04 09:44:35 - __main__ - INFO - Calculated aggregated percentages - Bonds: 0.0%, Equities: 4.0%, Real Estate: 13.0%
+2025-12-04 09:44:35 - __main__ - INFO - 2024 Percentage validation passed: 99.0%
+2025-12-04 09:44:35 - __main__ - INFO - 2023 Percentage validation passed: 100.0%
+2025-12-04 09:44:35 - __main__ - INFO - 2024 Percentage validation passed: 99.0%
+2025-12-04 09:44:35 - __main__ - INFO - 2023 Percentage validation passed: 100.0%
+2025-12-04 09:44:35 - __main__ - INFO - Successfully parsed - 2 years extracted
+2025-12-04 09:44:35 - __main__ - INFO -   2024: Total Assets: 52241.0, Asset Classes: 20
+2025-12-04 09:44:35 - __main__ - INFO -   2023: Total Assets: 54404.0, Asset Classes: 20
