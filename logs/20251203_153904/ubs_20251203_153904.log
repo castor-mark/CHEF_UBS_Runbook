@@ -1,0 +1,25 @@
+2025-12-03 15:39:04 - root - INFO - ============================================================
+2025-12-03 15:39:04 - root - INFO - Logging initialized
+2025-12-03 15:39:04 - root - INFO - Log file: ./logs\20251203_153904\ubs_20251203_153904.log
+2025-12-03 15:39:04 - root - INFO - Log level: DEBUG
+2025-12-03 15:39:04 - root - INFO - Run timestamp: 20251203_153904
+2025-12-03 15:39:04 - root - INFO - ============================================================
+2025-12-03 15:39:04 - __main__ - INFO - 
+Parsing PDF: Project_information/annual-report-ubs-group-2023.pdf
+2025-12-03 15:39:04 - __main__ - INFO - Extracted year from filename: 2023
+2025-12-03 15:39:04 - __main__ - INFO - Searching for Post-employment benefit plans section...
+2025-12-03 15:39:04 - __main__ - INFO - Total pages: 430, searching backwards from end...
+2025-12-03 15:39:18 - __main__ - INFO - Found benefit plans table on page 393
+2025-12-03 15:39:18 - __main__ - INFO - Extracting table from page 393 using Camelot...
+2025-12-03 15:39:21 - camelot - INFO - Processing page-393
+2025-12-03 15:39:21 - __main__ - INFO - Extracted table: 66 rows x 9 columns
+2025-12-03 15:39:21 - __main__ - INFO - Table accuracy: 98.20%
+2025-12-03 15:39:21 - __main__ - INFO - Saved extracted table to: extracted\20251203_153904\2023\benefit_plans_table_2023.csv
+2025-12-03 15:39:21 - __main__ - INFO - Saved extraction metadata to: extracted\20251203_153904\2023\extraction_metadata_2023.json
+2025-12-03 15:39:21 - __main__ - INFO - Searching for date columns...
+2025-12-03 15:39:21 - __main__ - INFO - Found Year 1: 2023 at Date Col 3, Allocation Col 5
+2025-12-03 15:39:21 - __main__ - INFO - Found Year 2: 2022 at Date Col 7, Allocation Col 9
+2025-12-03 15:39:21 - __main__ - INFO - Finding data boundaries...
+2025-12-03 15:39:21 - __main__ - INFO - First data row (Cash) at row 9
+2025-12-03 15:39:21 - __main__ - INFO - Last data row (Total) at row 30
+2025-12-03 15:39:21 - __main__ - INFO - Parsing table data...

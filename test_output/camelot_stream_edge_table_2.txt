@@ -1,0 +1,16 @@
+CAMELOT STREAM EDGE EXTRACTION - Table 2
+================================================================================
+Shape: 10 rows x 3 columns
+Accuracy: 98.44%
+================================================================================
+
+Row   0: ['', '31.12.24', '31.12.23']
+Row   1: ['Total fair value of plan assets', '52,241', '54,404']
+Row   2: ['o\nf\n \nwhich: Investments in UBS instruments2', '', '']
+Row   3: ['Bank accounts at UBS', '926', '666']
+Row   4: ['UBS debt instruments', '238', '211']
+Row   5: ['UBS shares', '64', '72']
+Row   6: ['Securities lent to UBS3', '956', '827']
+Row   7: ['P\nr\noperty occupied by UBS', '73', '108']
+Row   8: ['Derivative financial instruments, counterparty UBS3', '(\n126)', '534']
+Row   9: ['', '1 The bond credit ratings are primarily based on S&P’s credit ratings. Ratings AAA to BBB– and below BBB– represent investment grade and non-investment grade ratings, respectively. In cases where credit ratings', '']

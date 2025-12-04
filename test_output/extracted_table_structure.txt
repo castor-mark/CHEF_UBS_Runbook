@@ -1,0 +1,373 @@
+FULL TABLE EXTRACTION
+================================================================================
+
+Shape: 33 rows x 9 columns
+Accuracy: 99.73%
+================================================================================
+
+Row   0:
+  Col 0: 
+  Col 1: 
+  Col 2: 
+  Col 3: 
+  Col 4: Plan asset
+  Col 5: 
+  Col 6: 
+  Col 7: 
+  Col 8: Plan asset
+
+Row   1:
+  Col 0: 
+  Col 1: 
+  Col 2: Fair value
+  Col 3: 
+  Col 4: allocation %
+  Col 5: 
+  Col 6: Fair value
+  Col 7: 
+  Col 8: allocation %
+
+Row   2:
+  Col 0: 
+  Col 1: Quoted
+  Col 2: 
+  Col 3: 
+  Col 4: 
+  Col 5: Quoted
+  Col 6: 
+  Col 7: 
+  Col 8: 
+
+Row   3:
+  Col 0: 
+  Col 1: in an active
+  Col 2: 
+  Col 3: 
+  Col 4: 
+  Col 5: in an active
+  Col 6: 
+  Col 7: 
+  Col 8: 
+
+Row   4:
+  Col 0: USD m
+  Col 1: market
+  Col 2: Other
+  Col 3: Total
+  Col 4: 
+  Col 5: market
+  Col 6: Other
+  Col 7: Total
+  Col 8: 
+
+Row   5:
+  Col 0: Cash and cash equivalents
+  Col 1: 911
+  Col 2: 0
+  Col 3: 911
+  Col 4: 2
+  Col 5: 1,205
+  Col 6: 0
+  Col 7: 1,205
+  Col 8: 2
+
+Row   6:
+  Col 0: Equity securities
+  Col 1: 
+  Col 2: 
+  Col 3: 
+  Col 4: 
+  Col 5: 
+  Col 6: 
+  Col 7: 
+  Col 8: 
+
+Row   7:
+  Col 0: Domestic
+  Col 1: 0
+  Col 2: 0
+  Col 3: 0
+  Col 4: 0
+  Col 5: 0
+  Col 6: 24
+  Col 7: 24
+  Col 8: 0
+
+Row   8:
+  Col 0: Foreign
+  Col 1: 0
+  Col 2: 1,425
+  Col 3: 1,425
+  Col 4: 3
+  Col 5: 0
+  Col 6: 2,132
+  Col 7: 2,132
+  Col 8: 4
+
+Row   9:
+  Col 0: Bonds
+  Col 1: 
+  Col 2: 
+  Col 3: 
+  Col 4: 
+  Col 5: 
+  Col 6: 
+  Col 7: 
+  Col 8: 
+
+Row  10:
+  Col 0: Domestic, AAA to BBB–
+  Col 1: 156
+  Col 2: 0
+  Col 3: 156
+  Col 4: 0
+  Col 5: 100
+  Col 6: 0
+  Col 7: 100
+  Col 8: 0
+
+Row  11:
+  Col 0: Foreign, AAA to BBB–
+  Col 1: 0
+  Col 2: 0
+  Col 3: 0
+  Col 4: 0
+  Col 5: 51
+  Col 6: 0
+  Col 7: 51
+  Col 8: 0
+
+Row  12:
+  Col 0: Real estate / property
+  Col 1: 
+  Col 2: 
+  Col 3: 
+  Col 4: 
+  Col 5: 
+  Col 6: 
+  Col 7: 
+  Col 8: 
+
+Row  13:
+  Col 0: Domestic
+  Col 1: 0
+  Col 2: 5,967
+  Col 3: 5,967
+  Col 4: 11
+  Col 5: 0
+  Col 6: 6,195
+  Col 7: 6,195
+  Col 8: 11
+
+Row  14:
+  Col 0: Foreign
+  Col 1: 0
+  Col 2: 1,086
+  Col 3: 1,086
+  Col 4: 2
+  Col 5: 0
+  Col 6: 1,017
+  Col 7: 1,017
+  Col 8: 2
+
+Row  15:
+  Col 0: Investment funds
+  Col 1: 
+  Col 2: 
+  Col 3: 
+  Col 4: 
+  Col 5: 
+  Col 6: 
+  Col 7: 
+  Col 8: 
+
+Row  16:
+  Col 0: Equity
+  Col 1: 
+  Col 2: 
+  Col 3: 
+  Col 4: 
+  Col 5: 
+  Col 6: 
+  Col 7: 
+  Col 8: 
+
+Row  17:
+  Col 0: Domestic
+  Col 1: 1,300
+  Col 2: 0
+  Col 3: 1,300
+  Col 4: 2
+  Col 5: 1,376
+  Col 6: 0
+  Col 7: 1,376
+  Col 8: 3
+
+Row  18:
+  Col 0: Foreign
+  Col 1: 8,520
+  Col 2: 2,072
+  Col 3: 10,592
+  Col 4: 20
+  Col 5: 8,317
+  Col 6: 2,196
+  Col 7: 10,513
+  Col 8: 19
+
+Row  19:
+  Col 0: Bonds1
+  Col 1: 
+  Col 2: 
+  Col 3: 
+  Col 4: 
+  Col 5: 
+  Col 6: 
+  Col 7: 
+  Col 8: 
+
+Row  20:
+  Col 0: Domestic, AAA to BBB–
+  Col 1: 6,921
+  Col 2: 0
+  Col 3: 6,921
+  Col 4: 13
+  Col 5: 7,952
+  Col 6: 0
+  Col 7: 7,952
+  Col 8: 15
+
+Row  21:
+  Col 0: Domestic, below BBB–
+  Col 1: 9
+  Col 2: 0
+  Col 3: 9
+  Col 4: 0
+  Col 5: 1
+  Col 6: 0
+  Col 7: 1
+  Col 8: 0
+
+Row  22:
+  Col 0: Foreign, AAA to BBB–
+  Col 1: 12,886
+  Col 2: 0
+  Col 3: 12,886
+  Col 4: 25
+  Col 5: 13,497
+  Col 6: 0
+  Col 7: 13,497
+  Col 8: 25
+
+Row  23:
+  Col 0: Foreign, below BBB–
+  Col 1: 1,393
+  Col 2: 0
+  Col 3: 1,393
+  Col 4: 3
+  Col 5: 1,249
+  Col 6: 0
+  Col 7: 1,249
+  Col 8: 2
+
+Row  24:
+  Col 0: Real estate
+  Col 1: 
+  Col 2: 
+  Col 3: 
+  Col 4: 
+  Col 5: 
+  Col 6: 
+  Col 7: 
+  Col 8: 
+
+Row  25:
+  Col 0: Domestic
+  Col 1: 1,938
+  Col 2: 0
+  Col 3: 1,938
+  Col 4: 4
+  Col 5: 1,906
+  Col 6: 0
+  Col 7: 1,906
+  Col 8: 4
+
+Row  26:
+  Col 0: Foreign
+  Col 1: 451
+  Col 2: 117
+  Col 3: 568
+  Col 4: 1
+  Col 5: 537
+  Col 6: 79
+  Col 7: 616
+  Col 8: 1
+
+Row  27:
+  Col 0: Other
+  Col 1: 1,396
+  Col 2: 3,383
+  Col 3: 4,780
+  Col 4: 9
+  Col 5: 1,960
+  Col 6: 3,373
+  Col 7: 5,333
+  Col 8: 10
+
+Row  28:
+  Col 0: Other investments
+  Col 1: 475
+  Col 2: 1,833
+  Col 3: 2,308
+  Col 4: 4
+  Col 5: 667
+  Col 6: 569
+  Col 7: 1,236
+  Col 8: 2
+
+Row  29:
+  Col 0: Total fair value of plan assets
+  Col 1: 36,357
+  Col 2: 15,884
+  Col 3: 52,241
+  Col 4: 100
+  Col 5: 38,817
+  Col 6: 15,586
+  Col 7: 54,404
+  Col 8: 100
+
+Row  30:
+  Col 0: 
+  Col 1: 
+  Col 2: 
+  Col 3: 31.12.24
+  Col 4: 
+  Col 5: 
+  Col 6: 
+  Col 7: 31.12.23
+  Col 8: 
+
+Row  31:
+  Col 0: Total fair value of plan assets
+  Col 1: 
+  Col 2: 
+  Col 3: 52,241
+  Col 4: 
+  Col 5: 
+  Col 6: 
+  Col 7: 54,404
+  Col 8: 
+
+Row  32:
+  Col 0: o
+f
+ 
+which: Investments in UBS instruments2
+  Col 1: 
+  Col 2: 
+  Col 3: 
+  Col 4: 
+  Col 5: 
+  Col 6: 
+  Col 7: 
+  Col 8: 
+

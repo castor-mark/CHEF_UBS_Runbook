@@ -1,0 +1,28 @@
+2025-12-02 15:23:13 - root - INFO - ============================================================
+2025-12-02 15:23:13 - root - INFO - Logging initialized
+2025-12-02 15:23:13 - root - INFO - Log file: ./logs\20251202_152313\ubs_20251202_152313.log
+2025-12-02 15:23:13 - root - INFO - Log level: DEBUG
+2025-12-02 15:23:13 - root - INFO - Run timestamp: 20251202_152313
+2025-12-02 15:23:13 - root - INFO - ============================================================
+2025-12-02 15:23:16 - __main__ - INFO - Chrome driver initialized
+2025-12-02 15:23:16 - __main__ - INFO - Download directory: C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\downloads\20251202_152313
+2025-12-02 15:23:16 - __main__ - INFO - Navigating to https://www.ubs.com/global/en/investor-relations/financial-information/annual-reporting.html
+2025-12-02 15:23:24 - __main__ - INFO - Page loaded successfully
+2025-12-02 15:23:24 - __main__ - INFO - Handling cookie consent...
+2025-12-02 15:23:24 - __main__ - INFO - Cookie consent dialog found
+2025-12-02 15:23:26 - __main__ - INFO - Cookie consent accepted
+2025-12-02 15:23:26 - __main__ - INFO - Scrolling to Reporting Suite section...
+2025-12-02 15:23:28 - __main__ - INFO - Scrolled to Reporting Suite section
+2025-12-02 15:23:28 - __main__ - INFO - Looking for UBS Group Annual Report link...
+2025-12-02 15:23:29 - __main__ - INFO - Found section: Annual Report highlights
+2025-12-02 15:23:29 - __main__ - INFO - Found section: Annual Report highlights
+2025-12-02 15:23:29 - __main__ - INFO - Found section: Annual Report 2024
+2025-12-02 15:23:30 - __main__ - INFO - Found UBS Group report: Annual Report 2024 – UBS Group
+2025-12-02 15:23:30 - __main__ - INFO - Navigating to digital report: https://secure.ubs.com/minisites/group-functions/investor-relations/annual-report/2024/digital-ar24-group/digital-ar24-group/index.html
+2025-12-02 15:23:41 - __main__ - INFO - Digital report page loaded
+2025-12-02 15:23:41 - __main__ - INFO - Looking for PDF download button...
+2025-12-02 15:23:41 - __main__ - INFO - Found navbar download button: https://www.ubs.com/content/dam/assets/cc/investor-relations/annual-report/2024/annual-report-ubs-group-2024.pdf
+2025-12-02 15:23:41 - __main__ - INFO - Downloading PDF for 2024...
+2025-12-02 15:23:41 - __main__ - INFO - Downloading from: https://www.ubs.com/content/dam/assets/cc/investor-relations/annual-report/2024/annual-report-ubs-group-2024.pdf
+2025-12-02 15:23:44 - __main__ - INFO - Downloaded: 2024 - 8840656 bytes
+2025-12-02 15:23:46 - __main__ - INFO - Browser closed

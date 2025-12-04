@@ -1,0 +1,25 @@
+lets talk about this (BONDS: 41% (calculated)
+EQUITIES: 25% (calculated)
+REALESTATE: 18% (calculated))   for this is supposed to be (EQUITIES)= we are supposed to be looking for the values collected under (Equity securities )that is the (Domestic+Foreign) which for this case is 0+3=3   and BONDS:  that is (Domestic, AAA to BBB–)+(Foreign, AAA to BBB–) = 0+0=0    for 
+ REALESTATE will be  (Domestic+Foreign)=11+2=13  
+
+
+ lets discuss thiss you get my poin so change of plans we need the valuss for both the (Plan asset
+allocation %) for the both years  what i expect is the manual selected data  replica this is the data collected manualy and is 100%accurate
+
+(C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\Project_information\CHEF_UBS_DATA_20250319 - DATA (1).csv)
+( C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\Project_information\CHEF_UBS_DATA_20250319 (1).xlsx)
+
+analyze the data look at the screen shot be fore trying to fix the parser lets discuss this concept create a parser 
+
+like this (C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\test_camelot_extraction.py)
+
+
+first lets forcuss on the full table extraction first  when we get the csv of the table then it will be easy to parse that csv and get the values we need what do you think 
+
+
+the concept is perfect since this script you created did a better job at extracting thatable 
+(C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\test_output\camelot_stream_edge_table_1.csv)
+i was even supriseed we need to do a beter job at i dentifying the headers and sub heades in the table too 
+we need to be intelligent about this dont rushanalyze the iformation then lets discuss this 
+our results will have 2 years values based on the dates at the top of the table  like for this case based on the screen shot you can see (31.12.24 ) and (31.12.23) which is the current year and last yearleading to the resuldt i showd you on the manual data 

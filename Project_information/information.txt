@@ -1,0 +1,153 @@
+we are go na use a similar architecture a s my previous code   i geus first thisngs firs is that we need the work on the config file config.PY
+
+the headers and subheaders will be similar to this sample data and in the same arrangment  so create a maping in my config file (C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\Project_information\CHEF_UBS_DATA_20250319 - DATA.csv) so i expect my headers and sub header to be exactly the same as this sample data 
+
+
+
+
+depending on the config setting of year  our scrapper.py will navigate the site (https://www.ubs.com/global/en/investor-relations/financial-information/annual-reporting.html) here  is a sample of the site after loading (C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\Project_information\sample of site.txt)
+
+we will have to deal with the cookie section  (<div class="privacysettings__banner"><div class="privacysettings__bannerWrapper"><div class="privacysettings__bannerText"><span class="privacysettings__bannerDisclaimer"><p>This website uses cookies to make sure you get the best experience on our website. You can find more information under the <a href="/global/en/legal/privacy.onlycontent.html" target="_blank">Privacy Statement</a>&nbsp;and our&nbsp;<a href="/global/en/legal/privacy/users.onlycontent.html" target="_self">cookie notice</a>. You are free to change your cookies' settings in the privacy settings.</p></span></div><div class="privacysettings__bannerButtonsWrapper"><button type="button" data-validate="false" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-primarytransparent privacysettings__bannerButton privacysettings__trackingButton" data-ps-tracking-button-version="acceptAll" name="senddata"><span class="actionbtn__title">Agree to all</span></button><button type="button" data-validate="false" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-primarytransparent privacysettings__declineAllCookies privacysettings__bannerButton" data-ps-tracking-button-version="declineAll" name="senddata"><span class="actionbtn__title">Decline all</span></button><privacy-settings-link origin="lightBoxBar"><button type="button" data-validate="false" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-primarytransparent privacysettings__bannerButton"><span class="actionbtn__title">Set preferences</span></button></privacy-settings-link></div></div></div>)
+
+we will select agree all (<div class="privacysettings__bannerButtonsWrapper"><button type="button" data-validate="false" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-primarytransparent privacysettings__bannerButton privacysettings__trackingButton" data-ps-tracking-button-version="acceptAll" name="senddata"><span class="actionbtn__title">Agree to all</span></button><button type="button" data-validate="false" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-primarytransparent privacysettings__declineAllCookies privacysettings__bannerButton" data-ps-tracking-button-version="declineAll" name="senddata"><span class="actionbtn__title">Decline all</span></button><privacy-settings-link origin="lightBoxBar"><button type="button" data-validate="false" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-primarytransparent privacysettings__bannerButton"><span class="actionbtn__title">Set preferences</span></button></privacy-settings-link></div>
+
+
+)
+perfect we are gonna scroll down to the report section for our case its hear (<div class="sectionheader__base"><div class="grid-row grid-row--verticalCenter gridcontrol2__row--sectionHeader"><div class="gridcontrol2__cell--sectionTitle grid-cell     "><h2 class="sectionheader__hl">
+                Reporting Suite
+            </h2><span class="sectionheader__hlUnderline"></span></div></div></div>)
+
+
+            BE LOW IT WE HAVE THE REPORTS  (<div class="gridcontrol3__row grid-row"><div class="container container--stackedContent gridcontainer gridcontainer--gap-medium gridcontrol3__cell container--bg1"><div class="container__base"><div class="container__content"><div data-nc="GridContext" class="basecomponent basecomponent__base textimage textimage__base textimagegridcontext__context--extra-narrow textimage__context textimage__context--narrow" data-gridcontext-name="textimagegridcontext" data-gridcontext-context="narrow"><div class="highlighting__base highlighting__base--default " id="textimage-2064681317" style="--imagecomponent-width: 100%"><div class="textimage__richtext richtext__base  "><h3>Annual Report 2024</h3><p>Our Annual Report provides comprehensive information about the firm, its business, governance and financial performance, as well as information about compensation of senior management and the Board of Directors (executive and non-executive members). It contains both audited and nonaudited information.</p></div></div></div><div class="basecomponent basecomponent__base linklistnewlook linklistnewlook__base"><div class="linklistnewlook__context linklistnewlook__context--narrow" data-nc="GridContext" data-gridcontext-name="linklistnewlookgridcontext" data-gridcontext-context="narrow"><div class="linklistnewlook__wrapper linklistnewlook__wrapper--standard"><ul class="linklistnewlook__list"><li class="linklistnewlook__listItem link basecomponent basecomponent__base"><div><div class="actionbtn__wrapper actionbtn__wrapper--left"><a href="https://secure.ubs.com/minisites/group-functions/investor-relations/annual-report/2024/digital-ar24-group/digital-ar24-group/index.html" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-red " data-ct="ar-2024-ubs-group-digital" data-ct-sensitive="false"><span class="actionbtn__title">Annual Report 2024 – UBS Group</span><span class="actionbtn__ctaIcon"><svg class="svgicon__base arrowicon__base arrowicon__animation--growHover" viewBox="0 0 32 32" aria-hidden="true"><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowChevron" class="arrowicon__chevron"></use><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowLine" class="arrowicon__line"></use></svg></span></a></div></div></li><li class="linklistnewlook__listItem link basecomponent basecomponent__base"><div><div class="actionbtn__wrapper actionbtn__wrapper--left"><a href="https://secure.ubs.com/minisites/group-functions/investor-relations/annual-report/2024/digital-ar24-ag/digital-ar24-ag/index.html" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-red " data-ct="ar-2024-ubs-ag-digital" data-ct-sensitive="false"><span class="actionbtn__title">Annual Report 2024 – UBS AG</span><span class="actionbtn__ctaIcon"><svg class="svgicon__base arrowicon__base arrowicon__animation--growHover" viewBox="0 0 32 32" aria-hidden="true"><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowChevron" class="arrowicon__chevron"></use><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowLine" class="arrowicon__line"></use></svg></span></a></div></div></li><li class="linklistnewlook__listItem link basecomponent basecomponent__base"><div><div class="actionbtn__wrapper actionbtn__wrapper--left"><a href="https://secure.ubs.com/minisites/group-functions/investor-relations/annual-report/2024/digital-ar24-group-de/digital-ar24-group-de/index.html" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-primarytransparent " data-ct="ar-2024-ubs-group-digital-de" data-ct-sensitive="false"><span class="actionbtn__title">Auszug aus dem Geschäftsbericht 2024 – UBS Group (de)</span><span class="actionbtn__ctaIcon"><svg class="svgicon__base arrowicon__base arrowicon__animation--growHover" viewBox="0 0 32 32" aria-hidden="true"><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowChevron" class="arrowicon__chevron"></use><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowLine" class="arrowicon__line"></use></svg></span></a></div></div></li><li class="linklistnewlook__listItem link basecomponent basecomponent__base"><div><div class="actionbtn__wrapper actionbtn__wrapper--left"><a href="https://secure.ubs.com/minisites/group-functions/investor-relations/annual-report/2024/digital-ar24-group/digital-ar24-group/index.html#book_4_11" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-primarytransparent " data-ct="ar-2024-compensation-digital" data-ct-sensitive="false"><span class="actionbtn__title">Compensation (extract from Annual Report 2024 – UBS Group)</span><span class="actionbtn__ctaIcon"><svg class="svgicon__base arrowicon__base arrowicon__animation--growHover" viewBox="0 0 32 32" aria-hidden="true"><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowChevron" class="arrowicon__chevron"></use><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowLine" class="arrowicon__line"></use></svg></span></a></div></div></li></ul></div></div></div><div data-nc="GridContext" class="basecomponent basecomponent__base textimage textimage__base textimagegridcontext__context--extra-narrow textimage__context textimage__context--narrow" data-gridcontext-name="textimagegridcontext" data-gridcontext-context="narrow"><div class="highlighting__base highlighting__base--default " id="textimage-1817378892" style="--imagecomponent-width: 100%"><div class="textimage__richtext richtext__base  "><h3>Other links:</h3></div></div></div><div data-nc="GridContext" class="basecomponent linklistreimagined linklistreimagined__base linklistreimagined__context--narrow basecomponent__base linklistreimagined__context" data-gridcontext-name="linklistreimaginedgridcontext"><link rel="stylesheet" href="/etc/designs/fit/includes/css/components/linklistreimagined/publish.min.ACSHASH0d7d9fd7a53799fc0d68c0e1e062ea23.css" type="text/css"><div class="linklistreimagined__wrapper"><ul class="linklistreimagined__list"><li class="linklistreimagined__listItem link basecomponent svgicon--hoverTrigger "><a href="/global/en/investor-relations/complementary-financial-information/disclosure-legal-entities.html" class=" listitem__link link__base"><span class="listitem__text">
+                Significant regulated subsidiaries’ and sub-groups’ reports and information</span><span class="hidden is-visuallyHidden"></span><div class="linklist__icon"><svg class="svgicon__base arrowicon__base arrowicon__animation--growHover " viewBox="0 0 32 32" aria-hidden="true"><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowChevron" class="arrowicon__chevron"></use><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowLine" class="arrowicon__line"></use></svg></div></a></li><li class="linklistreimagined__listItem link basecomponent svgicon--hoverTrigger "><a href="/global/en/investor-relations/financial-information/timeseries.html" class=" listitem__link link__base"><span class="listitem__text">
+                Historical time series and key figures</span><span class="hidden is-visuallyHidden"></span><div class="linklist__icon"><svg class="svgicon__base arrowicon__base arrowicon__animation--growHover " viewBox="0 0 32 32" aria-hidden="true"><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowChevron" class="arrowicon__chevron"></use><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowLine" class="arrowicon__line"></use></svg></div></a></li></ul></div></div></div></div></div><div class="container container--stackedContent gridcontainer gridcontainer--gap-medium gridcontrol3__cell container--bg1"><div class="container__base"><div class="container__content"><div data-nc="GridContext" class="basecomponent basecomponent__base textimage textimage__base textimagegridcontext__context--extra-narrow textimage__context textimage__context--narrow" data-gridcontext-name="textimagegridcontext" data-gridcontext-context="narrow"><div class="highlighting__base highlighting__base--default " id="textimage-337266203" style="--imagecomponent-width: 100%"><div class="textimage__richtext richtext__base  "><h3>Sustainability Report 2024</h3><p>In the Sustainability Report we report about our sustainability approach and activities, consistently applying our information policy and disclosure principles. Additionally, we set out what climate and nature mean to us in terms of our strategy and its impact on planet, people and partnerships, and shows how we’re tracking our progress through metrics and targets.</p></div></div></div><div class="basecomponent basecomponent__base linklistnewlook linklistnewlook__base"><div class="linklistnewlook__context linklistnewlook__context--narrow" data-nc="GridContext" data-gridcontext-name="linklistnewlookgridcontext" data-gridcontext-context="narrow"><div class="linklistnewlook__wrapper linklistnewlook__wrapper--standard"><div class="linklistnewlook__listItem link"><div><div class="actionbtn__wrapper actionbtn__wrapper--left"><a href="https://secure.ubs.com/minisites/group-functions/investor-relations/sustainability-report/2024/digital-sr24/digital-sr24/index.html" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-red " data-ct="ar-2024-sustainability-digital" data-ct-sensitive="false"><span class="actionbtn__title">Sustainability Report 2024 – UBS Group</span><span class="actionbtn__ctaIcon"><svg class="svgicon__base arrowicon__base arrowicon__animation--growHover" viewBox="0 0 32 32" aria-hidden="true"><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowChevron" class="arrowicon__chevron"></use><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowLine" class="arrowicon__line"></use></svg></span></a></div></div></div></div></div></div><div data-nc="GridContext" class="basecomponent basecomponent__base textimage textimage__base textimagegridcontext__context--extra-narrow textimage__context textimage__context--narrow" data-gridcontext-name="textimagegridcontext" data-gridcontext-context="narrow"><div class="highlighting__base highlighting__base--default " id="textimage-26625028" style="--imagecomponent-width: 100%"><div class="textimage__richtext richtext__base  "><h3>Other links:</h3></div></div></div><div data-nc="GridContext" class="basecomponent linklistreimagined linklistreimagined__base linklistreimagined__context--narrow basecomponent__base linklistreimagined__context" data-gridcontext-name="linklistreimaginedgridcontext"><div class="linklistreimagined__wrapper"><ul class="linklistreimagined__list"><li class="linklistreimagined__listItem link basecomponent svgicon--hoverTrigger "><a href="/global/en/investor-relations/financial-information/annual-reporting/_jcr_content/root/contentarea/mainpar/toplevelgrid_1041865046/col_2/linklistreimagined_c/link_copy.0933861145.file/PS9jb250ZW50L2RhbS9hc3NldHMvY2MvaW52ZXN0b3ItcmVsYXRpb25zL2FubnVhbC1yZXBvcnQvMjAyNC9zdXN0YWluYWJpbGl0eS1yZXBvcnQtc3VwcGxlbWVudC0yMDI0LnBkZg==/sustainability-report-supplement-2024.pdf" class=" listitem__link link__base"><span class="listitem__text">
+                Sustainability Report Supplement 2024 – UBS Group (PDF)</span><span class="hidden is-visuallyHidden"></span><div class="linklist__icon"><svg class="svgicon__base arrowicon__base arrowicon__animation--growHover " viewBox="0 0 32 32" aria-hidden="true"><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowChevron" class="arrowicon__chevron"></use><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowLine" class="arrowicon__line"></use></svg></div></a></li><li class="linklistreimagined__listItem link basecomponent svgicon--hoverTrigger "><a href="/global/en/sustainability-impact.html" class=" listitem__link link__base"><span class="listitem__text">
+                Sustainability and impact</span><span class="hidden is-visuallyHidden"></span><div class="linklist__icon"><svg class="svgicon__base arrowicon__base arrowicon__animation--growHover " viewBox="0 0 32 32" aria-hidden="true"><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowChevron" class="arrowicon__chevron"></use><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowLine" class="arrowicon__line"></use></svg></div></a></li></ul></div></div></div></div></div></div>)
+
+
+
+                BASED ON OUR RUNBOOK (C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\Project_information\CHEF_UBS_Runbook.docx)
+
+
+            WE ARE SUPPOSER TO DOWNLOAD THE  the UBS Group anual report (<div class="actionbtn__wrapper actionbtn__wrapper--left"><a href="https://secure.ubs.com/minisites/group-functions/investor-relations/annual-report/2024/digital-ar24-group/digital-ar24-group/index.html" class="actionbtn__link svgicon--hoverTrigger actionbtn--color-red " data-ct="ar-2024-ubs-group-digital" data-ct-sensitive="false"><span class="actionbtn__title">Annual Report 2024 – UBS Group</span><span class="actionbtn__ctaIcon"><svg class="svgicon__base arrowicon__base arrowicon__animation--growHover" viewBox="0 0 32 32" aria-hidden="true"><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowChevron" class="arrowicon__chevron"></use><use href="/etc/designs/fit/includes/shared_assets/img/icons/definitions/arrow-24.13112024.svg#svgIconArrowLine" class="arrowicon__line"></use></svg></span></a></div>)
+             as you see for our case its this  (C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\Project_information\report page screen shot image.png) as you can see in this screen shot this is the report we are supposed to download 
+             when you click the link it will redirect us to a full report page where we will have to find the download page here is a screen shot (C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\Project_information\redirect report page image.png)
+here is a sample of the redirect page (C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\Project_information\sample of redirect page.txt)
+
+so the first download button is on the navbar page (<div class="side-buttons-container">                 <div class="side-container">                     <button type="button" class="side-responsive-button" aria-label="Show more links">                         <span>More</span>                         <i class="uri-angle-down"></i>                         <i class="uri-angle-up"></i>                     </button>                     <div class="side-wrapper">                         
+                <div class="side-nav-item-wrapper">
+                    <a href="#contact_and_terms_page" target="_blank" class="">
+                        Contacts &amp; Terms
+                        
+                    </a>
+                </div>
+                <div class="side-nav-item-wrapper">
+                    <a href="https://www.ubs.com/global/en/investor-relations.html" target="_blank" class="">
+                        Go to Investor Relations
+                        <i class="uri-external-link"></i>
+                    </a>
+                </div>                     </div>                 </div>                 <div class="download-button-container">                     
+            <div class="header-pdf-download-button">
+                <a href="https://www.ubs.com/content/dam/assets/cc/investor-relations/annual-report/2024/annual-report-ubs-group-2024.pdf" target="_blank" class="download-button">
+                    Download full report (PDF)
+                    <i class="uri-download-normal"></i>
+                </a>
+            </div>                 </div> 			</div>))  for this case is this (<div class="header-pdf-download-button">
+                <a href="https://www.ubs.com/content/dam/assets/cc/investor-relations/annual-report/2024/annual-report-ubs-group-2024.pdf" target="_blank" class="download-button">
+                    Download full report (PDF)
+                    <i class="uri-download-normal"></i>
+                </a>
+            </div>)
+
+
+
+            the alternative download button is this (<div class="body-pdf-download-button">
+                <a href="https://www.ubs.com/content/dam/assets/cc/investor-relations/annual-report/2024/annual-report-ubs-group-2024.pdf" target="_blank" class="download-button">
+                    Download full report (PDF)
+                    <i class="uri-download-normal"></i>
+                </a>
+            </div>)  which is inside the (<main class="content">   ) wrapper when you click the download button it will lead you to the pdf viewer page where we will perform the download of the pdf which will trigere creation of a download folder with timestamped subfolders for every run 
+               
+ones we create the config and scrapper. lets test the download first  if susces pull then we proceed to the parser
+
+
+on the parsing i think we need to create a test scripr first we usee plumber to use keyword search to look for the tables like for this in stance we are looking for 
+
+(Post-employment benefit plans (continued)) table (Note 26 Post-employment benefit plans (continued)
+Composition and fair value of Swiss defined benefit plan assets
+31.12.24 31.12.23
+Fair value
+Plan asset
+allocation % Fair value
+Plan asset
+allocation %
+USD m
+Quoted
+in an active
+market Other Total
+Quoted
+in an active
+market Other Total
+Cash and cash equivalents 911 0 911 2 1,205 0 1,205 2
+Equity securities
+ Domestic 0 0 0 0 0 24 24 0
+ Foreign 0 1,425 1,425 3 0 2,132 2,132 4
+Bonds
+ Domestic, AAA to BBB– 156 0 156 0 100 0 100 0
+ Foreign, AAA to BBB– 0 0 0 0 51 0 51 0
+Real estate / property
+Domestic 0 5,967 5,967 11 0 6,195 6,195 11
+Foreign 0 1,086 1,086 2 0 1,017 1,017 2
+Investment funds
+Equity
+Domestic 1,300 0 1,300 2 1,376 0 1,376 3
+Foreign 8,520 2,072 10,592 20 8,317 2,196 10,513 19
+Bonds1
+Domestic, AAA to BBB– 6,921 0 6,921 13 7,952 0 7,952 15
+Domestic, below BBB– 9 0 9 0 1 0 1 0
+Foreign, AAA to BBB– 12,886 0 12,886 25 13,497 0 13,497 25
+Foreign, below BBB– 1,393 0 1,393 3 1,249 0 1,249 2
+Real estate
+Domestic 1,938 0 1,938 4 1,906 0 1,906 4
+Foreign 451 117 568 1 537 79 616 1
+Other 1,396 3,383 4,780 9 1,960 3,373 5,333 10
+Other investments 475 1,833 2,308 4 667 569 1,236 2
+Total fair value of plan assets 36,357 15,884 52,241 100 38,817 15,586 54,404 100
+31.12.24 31.12.23
+Total fair value of plan assets 52,241 54,404
+of which: Investments in UBS instruments
+2
+Bank accounts at UBS 926 666
+UBS debt instruments 238 211
+UBS shares 64 72
+Securities lent to UBS
+3
+ 956 827
+Property occupied by UBS 73 108
+Derivative financial instruments, counterparty UBS
+3
+ (126) 534
+1 The bond credit ratings are primarily based on S&P’s credit ratings. Ratings AAA to BBB– and below BBB– represent investment grade and non-investment grade ratings, respectively. In cases w
+)
+this is a sample of data i collected manualy  (C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\Project_information\CHEF_UBS_DATA_20250319 - DATA.csv)
+from the 2024 report that is present ans is our latest report  so first thing the parser 
+parses the pdf extract the data and the file genenrator generates the file in the out put folder with timestaped subfolders for every run and latest folder holding always the lates files 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

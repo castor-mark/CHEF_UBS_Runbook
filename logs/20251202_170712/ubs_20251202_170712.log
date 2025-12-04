@@ -1,0 +1,71 @@
+2025-12-02 17:07:12 - root - INFO - ============================================================
+2025-12-02 17:07:12 - root - INFO - Logging initialized
+2025-12-02 17:07:12 - root - INFO - Log file: ./logs\20251202_170712\ubs_20251202_170712.log
+2025-12-02 17:07:12 - root - INFO - Log level: DEBUG
+2025-12-02 17:07:12 - root - INFO - Run timestamp: 20251202_170712
+2025-12-02 17:07:12 - root - INFO - ============================================================
+2025-12-02 17:07:12 - __main__ - INFO - 
+Parsing PDF: downloads/20251202_152313/2024/Annual_Report_UBS_Group_2024.pdf
+2025-12-02 17:07:12 - __main__ - INFO - Extracted year from filename: 2024
+2025-12-02 17:07:12 - __main__ - INFO - Searching for Post-employment benefit plans section...
+2025-12-02 17:08:58 - __main__ - INFO - Found benefit plans table on page 361
+2025-12-02 17:08:58 - __main__ - INFO - Extracting table from page 361 using Camelot...
+2025-12-02 17:08:59 - camelot - INFO - Processing page-361
+2025-12-02 17:08:59 - __main__ - INFO - Extracted table: 33 rows x 9 columns
+2025-12-02 17:08:59 - __main__ - INFO - Table accuracy: 99.73%
+2025-12-02 17:08:59 - __main__ - INFO - Parsing Camelot table...
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 5: Cash and cash equivalents
+2025-12-02 17:08:59 - __main__ - DEBUG - CASH: 2.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 6: Equity securities
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 7: Domestic
+2025-12-02 17:08:59 - __main__ - DEBUG - DOMESTICEQUITYSECURITIES: 0.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 8: Foreign
+2025-12-02 17:08:59 - __main__ - DEBUG - FOREIGNEQUITYSECURITIES: 3.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 9: Bonds
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 10: Domestic, AAA to BBB–
+2025-12-02 17:08:59 - __main__ - DEBUG - NONINVESTDOMESTICBONDS: 0.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 11: Foreign, AAA to BBB–
+2025-12-02 17:08:59 - __main__ - DEBUG - NONINVESTFOREIGNBONDSRATED: 0.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 12: Real estate / property
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 13: Domestic
+2025-12-02 17:08:59 - __main__ - DEBUG - DOMESTICREALESTATE: 11.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 14: Foreign
+2025-12-02 17:08:59 - __main__ - DEBUG - FOREIGNREALESTATE: 2.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 15: Investment funds
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 16: Equity
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 17: Domestic
+2025-12-02 17:08:59 - __main__ - DEBUG - DOMESTICEQUITIES: 2.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 18: Foreign
+2025-12-02 17:08:59 - __main__ - DEBUG - FOREIGNEQUITIES: 20.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 19: Bonds1
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 20: Domestic, AAA to BBB–
+2025-12-02 17:08:59 - __main__ - DEBUG - DOMESTICBONDS: 13.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 21: Domestic, below BBB–
+2025-12-02 17:08:59 - __main__ - DEBUG - DOMESTICBONDSJUNK: 0.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 22: Foreign, AAA to BBB–
+2025-12-02 17:08:59 - __main__ - DEBUG - FOREIGNBONDSRATED: 25.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 23: Foreign, below BBB–
+2025-12-02 17:08:59 - __main__ - DEBUG - FOREIGNBONDSJUNK: 3.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 24: Real estate
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 25: Domestic
+2025-12-02 17:08:59 - __main__ - DEBUG - DOMESTICREALESTATEINVESTMENTS: 4.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 26: Foreign
+2025-12-02 17:08:59 - __main__ - DEBUG - FOREIGNREALESTATEINVESTMENTS: 1.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 27: Other
+2025-12-02 17:08:59 - __main__ - DEBUG - OTHER: 9.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 28: Other investments
+2025-12-02 17:08:59 - __main__ - DEBUG - Found 'Other investments', percentage_raw='4', percentage=4.0
+2025-12-02 17:08:59 - __main__ - DEBUG - OTHERINVESTMENTS: 4.0%
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 29: Total fair value of plan assets
+2025-12-02 17:08:59 - __main__ - DEBUG - Found 'Total fair value', total_raw='52,241', total_value=52241.0
+2025-12-02 17:08:59 - __main__ - INFO - Total assets: 52241.0 USD millions
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 31: Total fair value of plan assets
+2025-12-02 17:08:59 - __main__ - DEBUG - Found 'Total fair value', total_raw='52,241', total_value=52241.0
+2025-12-02 17:08:59 - __main__ - INFO - Total assets: 52241.0 USD millions
+2025-12-02 17:08:59 - __main__ - DEBUG - Processing row 32: o
+f
+ 
+which: Investments in UBS instruments2
+2025-12-02 17:08:59 - __main__ - INFO - Calculated aggregated percentages - Bonds: 41.0%, Equities: 25.0%, Real Estate: 18.0%
+2025-12-02 17:08:59 - __main__ - INFO - Percentage validation passed: 99.0%
+2025-12-02 17:08:59 - __main__ - INFO - Successfully parsed 2024 - Total Assets: 52241.0, Asset Classes: 20

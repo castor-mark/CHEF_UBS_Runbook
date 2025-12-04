@@ -1,0 +1,9 @@
+PAGE 361 METADATA
+================================================================================
+
+Width: 595.29998779
+Height: 841.90002441
+Number of curves: 0
+Number of edges: 49
+Number of lines: 49
+Number of rects: 0

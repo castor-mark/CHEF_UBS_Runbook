@@ -1,0 +1,91 @@
+2025-12-04 07:43:21 - root - INFO - ============================================================
+2025-12-04 07:43:21 - root - INFO - Logging initialized
+2025-12-04 07:43:21 - root - INFO - Log file: ./logs\20251204_074317\ubs_20251204_074317.log
+2025-12-04 07:43:21 - root - INFO - Log level: DEBUG
+2025-12-04 07:43:21 - root - INFO - Run timestamp: 20251204_074317
+2025-12-04 07:43:21 - root - INFO - ============================================================
+2025-12-04 07:43:25 - scraper - INFO - Chrome driver initialized
+2025-12-04 07:43:25 - scraper - INFO - Download directory: C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\downloads\20251204_074317
+2025-12-04 07:43:25 - scraper - INFO - Navigating to https://www.ubs.com/global/en/investor-relations/financial-information/annual-reporting.html
+2025-12-04 07:43:33 - scraper - INFO - Page loaded successfully
+2025-12-04 07:43:33 - scraper - INFO - Handling cookie consent...
+2025-12-04 07:43:33 - scraper - INFO - Cookie consent dialog found
+2025-12-04 07:43:35 - scraper - INFO - Cookie consent accepted
+2025-12-04 07:43:35 - scraper - INFO - Scrolling to Reporting Suite section...
+2025-12-04 07:43:37 - scraper - INFO - Scrolled to Reporting Suite section
+2025-12-04 07:43:37 - scraper - INFO - Looking for UBS Group Annual Report link...
+2025-12-04 07:43:38 - scraper - INFO - Found section: Annual Report highlights
+2025-12-04 07:43:38 - scraper - INFO - Found section: Annual Report highlights
+2025-12-04 07:43:38 - scraper - INFO - Found section: Annual Report 2024
+2025-12-04 07:43:39 - scraper - INFO - Found UBS Group report: Annual Report 2024 – UBS Group
+2025-12-04 07:43:39 - scraper - INFO - Navigating to digital report: https://secure.ubs.com/minisites/group-functions/investor-relations/annual-report/2024/digital-ar24-group/digital-ar24-group/index.html
+2025-12-04 07:43:51 - scraper - INFO - Digital report page loaded
+2025-12-04 07:43:51 - scraper - INFO - Looking for PDF download button...
+2025-12-04 07:43:51 - scraper - INFO - Found navbar download button: https://www.ubs.com/content/dam/assets/cc/investor-relations/annual-report/2024/annual-report-ubs-group-2024.pdf
+2025-12-04 07:43:51 - scraper - INFO - Downloading PDF for 2024...
+2025-12-04 07:43:51 - scraper - INFO - Downloading from: https://www.ubs.com/content/dam/assets/cc/investor-relations/annual-report/2024/annual-report-ubs-group-2024.pdf
+2025-12-04 07:43:54 - scraper - INFO - Downloaded: 2024 - 8840656 bytes
+2025-12-04 07:43:56 - scraper - INFO - Browser closed
+2025-12-04 07:43:56 - __main__ - INFO - Downloaded 1 reports
+2025-12-04 07:43:56 - __main__ - INFO - Parsing report for year 2024: C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\downloads\20251204_074317\2024\Annual_Report_UBS_Group_2024.pdf
+2025-12-04 07:43:56 - parserv2 - INFO - 
+Parsing PDF: C:\Users\Mark Castro\Documents\CHEF_UBS_Runbook\downloads\20251204_074317\2024\Annual_Report_UBS_Group_2024.pdf
+2025-12-04 07:43:56 - parserv2 - INFO - Extracted year from filename: 2024
+2025-12-04 07:43:56 - parserv2 - INFO - Searching for Post-employment benefit plans section...
+2025-12-04 07:43:56 - parserv2 - INFO - Total pages: 395, searching backwards from end...
+2025-12-04 07:44:07 - parserv2 - INFO - Found benefit plans table on page 361
+2025-12-04 07:44:07 - parserv2 - INFO - Extracting table from page 361 using Camelot...
+2025-12-04 07:44:08 - camelot - INFO - Processing page-361
+2025-12-04 07:44:08 - parserv2 - INFO - Extracted table: 35 rows x 9 columns
+2025-12-04 07:44:08 - parserv2 - INFO - Table accuracy: 98.82%
+2025-12-04 07:44:08 - parserv2 - INFO - Saved extracted table to: extracted\20251204_074317\2024\benefit_plans_table_2024.csv
+2025-12-04 07:44:08 - parserv2 - INFO - Saved extraction metadata to: extracted\20251204_074317\2024\extraction_metadata_2024.json
+2025-12-04 07:44:08 - parserv2 - INFO - Searching for date columns...
+2025-12-04 07:44:08 - parserv2 - INFO - Found Year 1: 2024 at Date Col 2, Allocation Col 4
+2025-12-04 07:44:08 - parserv2 - INFO - Found Year 2: 2023 at Date Col 6, Allocation Col 8
+2025-12-04 07:44:08 - parserv2 - INFO - Finding data boundaries...
+2025-12-04 07:44:08 - parserv2 - INFO - First data row (Cash) at row 7
+2025-12-04 07:44:08 - parserv2 - INFO - Last data row (Total) at row 31
+2025-12-04 07:44:08 - parserv2 - INFO - Parsing table data...
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 7: Cash and cash equivalents | Y1: 2.0% | Y2: 2.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 8: Equity securities | Y1: None% | Y2: None%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 9: Domestic | Y1: 0.0% | Y2: 0.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 10: Foreign | Y1: 3.0% | Y2: 4.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 11: Bonds | Y1: None% | Y2: None%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 12: Domestic, AAA to BBB– | Y1: 0.0% | Y2: 0.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 13: Foreign, AAA to BBB– | Y1: 0.0% | Y2: 0.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 14: Real estate / property | Y1: None% | Y2: None%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 15: Domestic | Y1: 11.0% | Y2: 11.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 16: Foreign | Y1: 2.0% | Y2: 2.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 17: Investment funds | Y1: None% | Y2: None%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 18: Equity | Y1: None% | Y2: None%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 19: Domestic | Y1: 2.0% | Y2: 3.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 20: Foreign | Y1: 20.0% | Y2: 19.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 21: Bonds1 | Y1: None% | Y2: None%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 22: Domestic, AAA to BBB– | Y1: 13.0% | Y2: 15.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 23: Domestic, below BBB– | Y1: 0.0% | Y2: 0.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 24: Foreign, AAA to BBB– | Y1: 25.0% | Y2: 25.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 25: Foreign, below BBB– | Y1: 3.0% | Y2: 2.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 26: Real estate | Y1: None% | Y2: None%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 27: Domestic | Y1: 4.0% | Y2: 4.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 28: Foreign | Y1: 1.0% | Y2: 1.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 29: Other | Y1: 9.0% | Y2: 10.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 30: Other investments | Y1: 4.0% | Y2: 2.0%
+2025-12-04 07:44:08 - parserv2 - DEBUG - Row 31: Total fair value of plan assets | Y1: 100.0% | Y2: 100.0%
+2025-12-04 07:44:08 - parserv2 - INFO - Calculated aggregated percentages - Bonds: 0.0%, Equities: 3.0%, Real Estate: 13.0%
+2025-12-04 07:44:08 - parserv2 - INFO - Calculated aggregated percentages - Bonds: 0.0%, Equities: 4.0%, Real Estate: 13.0%
+2025-12-04 07:44:08 - parserv2 - INFO - 2024 Percentage validation passed: 99.0%
+2025-12-04 07:44:08 - parserv2 - INFO - 2023 Percentage validation passed: 100.0%
+2025-12-04 07:44:08 - parserv2 - INFO - Successfully parsed - 2 years extracted
+2025-12-04 07:44:08 - parserv2 - INFO -   2024: Total Assets: 52241.0, Asset Classes: 20
+2025-12-04 07:44:08 - parserv2 - INFO -   2023: Total Assets: 54404.0, Asset Classes: 20
+2025-12-04 07:44:08 - __main__ - INFO - Successfully parsed 2024 report - extracted 2 years
+2025-12-04 07:44:08 - __main__ - INFO - Successfully parsed 2 reports
+2025-12-04 07:44:08 - file_generator - INFO - Creating DATA file with 2 records
+2025-12-04 07:44:08 - file_generator - INFO - DATA file saved: ./output\20251204_074317\CHEF_UBS_DATA_20251204_074317.xls
+2025-12-04 07:44:08 - file_generator - INFO - Creating META file
+2025-12-04 07:44:08 - file_generator - INFO - META file saved: ./output\20251204_074317\CHEF_UBS_META_20251204_074317.xls
+2025-12-04 07:44:08 - file_generator - INFO - Creating ZIP file: ./output\20251204_074317\CHEF_UBS_20251204_074317.zip
+2025-12-04 07:44:08 - file_generator - INFO - ZIP file created: ./output\20251204_074317\CHEF_UBS_20251204_074317.zip
+2025-12-04 07:44:08 - file_generator - INFO - Files also copied to 'latest' folder
+2025-12-04 07:44:08 - __main__ - INFO - Orchestrator completed successfully

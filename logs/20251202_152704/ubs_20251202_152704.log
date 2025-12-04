@@ -1,0 +1,14 @@
+2025-12-02 15:27:04 - root - INFO - ============================================================
+2025-12-02 15:27:04 - root - INFO - Logging initialized
+2025-12-02 15:27:04 - root - INFO - Log file: ./logs\20251202_152704\ubs_20251202_152704.log
+2025-12-02 15:27:04 - root - INFO - Log level: DEBUG
+2025-12-02 15:27:04 - root - INFO - Run timestamp: 20251202_152704
+2025-12-02 15:27:04 - root - INFO - ============================================================
+2025-12-02 15:27:04 - __main__ - INFO - 
+Parsing PDF: downloads/20251202_152313/2024/Annual_Report_UBS_Group_2024.pdf
+2025-12-02 15:27:04 - __main__ - INFO - Extracted year from filename: 2024
+2025-12-02 15:27:04 - __main__ - INFO - Searching for Post-employment benefit plans section...
+2025-12-02 15:28:49 - __main__ - INFO - Found benefit plans table on page 361
+2025-12-02 15:28:49 - __main__ - INFO - Extracting table data from page 361...
+2025-12-02 15:28:49 - __main__ - ERROR - No tables found on page
+2025-12-02 15:28:49 - __main__ - ERROR - Could not extract table data
